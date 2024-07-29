@@ -24,12 +24,12 @@ def process_account(create_method):
     maturity = numeric_prompt(f"{account_name} maturity in months", int)
 
     # Call the create_method function and pass the variables from the user.
-    updated_balance, interest_earned = create_method(balance, interest, maturity)
+    account = create_method(balance, interest, maturity)
 
     # Print out the interest earned and updated account balance with interest earned for the given months.
     print(f"""
-    Interest earned on the {account_name} account is: {interest_earned}
-    {account_name} account balance after interest earned is: {updated_balance}
+    Interest earned on the {account_name} account is: {account.interest}
+    {account_name} account balance after interest earned is: {account.balance}
     """)
 
 # Define the main function
