@@ -28,8 +28,8 @@ def process_account(create_method):
 
     # Print out the interest earned and updated account balance with interest earned for the given months.
     print(f"""
-    Interest earned on the {account_name} account is: {account.interest}
-    {account_name} account balance after interest earned is: {account.balance}
+    Interest earned on the {account_name} account is: ${account.interest:,.2f}
+    {account_name} account balance after interest earned is: ${account.balance:,.2f}
     """)
 
 # Define the main function
